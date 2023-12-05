@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+int Triangle(float side1, float side2, float side3);
+int main()
+{
+    //Saajid Aziz N01555756
+    //Lab5 Problem 1:
+
+    //declare variables
+    float side1, side2, side3;
+
+    int type;
+
+    //user input
+    printf("Please enter the value of the first side:\n");
+    scanf("%f", &side1);
+
+
+    printf("Please enter the value of the second side:\n");
+    scanf("%f", &side2);
+
+
+    printf("Please enter the value of the third side:\n");
+    scanf("%f", &side3);
+
+
+
+    type = Triangle(side1, side2, side3);
+    }
+
+
+    return 0;
+}
+int Triangle(float side1, float side2, float side3)
+{
+
+    int type;
+   //determine whether or not it is a triangle
+    if (side1<=0 || side2<=0 || side3<=0 || (side1+side2) <= side3 || (side2+side3) <= side1 || (side1 + side3) <= side2)
+       type = 0;
+    //determine what type of triangle it is
+    else if(side1 != side2 && side2 != side3 && side1 != side3)
+        type = 1;
+    else if ((side1 == side2 && side1 != side3) ||(side1 == side3 && side1 != side2) || (side3 == side2 && side1 != side3) )
+        type = 2;
+    else
+       type = 3;
+
+    return type;
+
+
+}
