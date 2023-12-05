@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //Saajid Aziz
+    //n01555756
+
+    //variables
+
+    int chips, chocolates, drinks;
+
+
+    //user-input
+    printf("Code 0= Empty\nCode 1=25 or less\nCode 2=Between 25 and 50\nCode 3=Full");
+    printf("Please enter the code (0-3) of Chips, Chocolates and Drinks that are left (in that order):");
+    scanf("%d%d%d", &chips, &chocolates, &drinks);
+
+
+    //Send out stockers if chips or chocolates or drinks = 0
+    //or if chips and chocolates are less than equal 25 or drinks and chocolates are less than equal 25 or chips and drinks are less than equal 25
+    //or if all three are less than equal 50
+
+
+
+    if (chips==0 || chocolates == 0 || drinks ==0)
+        printf("send a re stocker");
+    else if ((chips == 1 && chocolates == 1)|| (chocolates == 1 && drinks == 1)||(drinks == 1 && chips == 1))
+        printf("send a re stocker");
+    else if (chips == 2 && chocolates  == 2 && drinks == 2)
+        printf("send a re stocker");
+    else
+        printf("Don't send a re stocker");
+
+
+
+    return 0;
+}
