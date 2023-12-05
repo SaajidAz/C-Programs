@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //declare variables
+    float Weightlbs;
+    float Weightkg;
+
+    //Ask the user to enter body weight in pounds
+    printf("Enter your body weight in pounds: ");
+    scanf("%f", &Weightlbs);
+
+    //Multiply by 0.45359237 to convert to kilos
+
+    Weightkg = Weightlbs * 0.45359237;
+
+    //Print weight
+    printf("\n Your weight in Kilos is %f", Weightkg);
+
+
+
+    return 0;
+}
