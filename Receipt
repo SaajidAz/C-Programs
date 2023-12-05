@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   printf("Name: Saajid Aziz \nStudent Number: N01555756 \n");
+    //variable declaration
+//apples
+    int appleAmount;
+    float appleCost;
+    float subTotalApple;
+//Pineapples
+    int pineappleAmount;
+    float pineappleCost;
+    float subTotalPineapple;
+//Totals
+    float subTotal;
+    float Tax;
+
+    //userinput
+//apples
+    printf("How many apples are purchased?:");
+
+    scanf("%d",&appleAmount);
+
+    printf("What is the cost per apple?:");
+    scanf("%f",&appleCost);
+//pineapples
+    printf("How many pineapples:");
+
+    scanf("%d",&pineappleAmount);
+
+    printf("What is the cost per pineapple?:");
+    scanf("%f",&pineappleCost);
+
+    //calculations
+//apples
+    subTotalApple = (appleCost * appleAmount);
+//pineapples
+    subTotalPineapple = (pineappleCost * pineappleAmount);
+//totals
+    subTotal = subTotalPineapple + subTotalApple;
+    Tax = subTotal * 1.13;
+
+    //print
+
+    printf("**********************Receipt*************************\n \n");
+    printf("Number of Items \t\t Cost per Item \t\t Total Cost \n");
+    printf("Apples:%d \t\t\t %.2f \t\t\t $%.2f \n", appleAmount, appleCost, subTotalApple);
+    printf("pineapples:%d \t\t\t %.2f \t\t\t $%.2f \n", pineappleAmount, pineappleCost, subTotalPineapple);
+    printf("\n \t\t\t\t\t\t SubTotal Cost: $%.2f", subTotal);
+    printf("\n \t\t\t\t\t\t Total Cost: $%.2f", Tax);
+
+
+    return 0;
+}
