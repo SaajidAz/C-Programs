@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   //Saajid Aziz N01555756
+    //declare variables
+    int shares;
+    float cost;
+
+
+    //User input
+    printf("Enter the amount of shares you would like to buy:");
+    scanf("%d", &shares);
+
+
+    //if < 1000
+    if (shares < 1000)
+        printf("This will cost 29.95");
+    //if >1001 < 4000
+    else if (shares <4000)
+    {
+        cost = shares * 0.03;
+        printf("This will cost %.2f", cost);
+    }
+    else if (shares < 10000)
+    {
+            cost = shares * 0.02;
+            printf("This will cost %.2f", cost);
+    }
+        //if >10000
+    else
+    {
+         cost = shares * 0.01;
+            printf("This will cost %.2f", cost);
+    }
+
+
+    return 0;
+}
