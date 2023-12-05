@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+//This was a first semester very basic program that is not indicative of my current C programming skills
+int main()
+{
+
+
+    int nums[5];
+
+    printf("Please enter an integer: ");
+    scanf("%d", &nums[0]);
+    printf("Please enter an integer: ");
+    scanf("%d", &nums[1]);
+    printf("Please enter an integer: ");
+    scanf("%d", &nums[2]);
+    printf("Please enter an integer: ");
+    scanf("%d", &nums[3]);
+    printf("Please enter an integer: ");
+    scanf("%d", &nums[4]);
+//Q1. 1st and 3rd sum.
+printf("The sum of the first and third element is %d \n", nums[0]+nums[2]);
+
+
+
+//Q2. Write one statement to change the value of the 4th element of the array to 23.
+nums[3] = 23;
+
+//Q3. For loop scan
+
+for (int i = 0; i < 5; i++)
+    {
+    printf("Please enter an integer: ");
+    scanf("%d", &nums[i]);
+    }
+//Q4. For loop print
+for (int i = 0; i < 5; i++)
+    {
+    printf("%d\t", nums[i]);
+    }
+
+
+
+    printf("\n");
+//Q5. Reverse print
+for (int i = 4; i > -1; i--)
+    {
+    printf("%d\t", nums[i]);
+    }
+
+
+    printf("\n");
+//Q6. Print every other
+for (int i = 0; i < 5;i= i+2)
+    {
+    printf("%d\t", nums[i]);
+    }
+
+    return 0;
+}
